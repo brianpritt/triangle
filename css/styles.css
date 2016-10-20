@@ -1,0 +1,21 @@
+#equi{
+  display: none;
+}
+#isos{
+  display: none;
+}
+#scal{
+  display: none;
+}
+#nota{
+  display: none;
+}
+
+img {
+  width: 300px;
+
+}
+
+label {
+  display:block;
+}
