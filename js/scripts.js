@@ -2,19 +2,23 @@
 // Business
 var triangleTest = function(s1, s2, s3) {
 
+  if ((s1 + s2 <= s3)||(s2+s3 <= s1)||(s1 +s3<= s2)){
+    return("#nota");
+  }
+  if (s1 >= 0 && s2>= 0 && s3 >= 0) {
+      if (s1 === s2 && s2 === s3) {
+      return("#equi");// $("#equi").show();
+      } else if (((s1 === s2 && s2 != s3) && (s1&&s2&&s3)> 0)
+            || ((s1 != s2 && s2 === s3 ) &&(s1&&s2&&s3)> 0)
+            ||((s1 === s3 && s2 != s3) && (s1&&s2&&s3)> 0))
+             {
+        return("#isos");
+      } else if ((s1 != s2 && s2 != s3)&&(s1&&s2&&s3) != 0){
+        return("#scal");
+      } else {
+        return("#nota");
+      }
 
-  if (s1 >= 0 && s2>= 0 && s3 >= 0){
-    if (s1 === s2 && s2 === s3) {
-    return("#equi");// $("#equi").show();
-  } else if (((s1 === s2 && s2 != s3) && (s1&&s2&&s3)> 0)
-          || ((s1 != s2 && s2 === s3 ) &&(s1&&s2&&s3)> 0)
-          ||((s1 === s3 && s2 != s3) && (s1&&s2&&s3)> 0)){
-      return("#isos");
-    } else if ((s1 != s2 && s2 != s3)&&(s1&&s2&&s3) != 0){
-      return("#scal");
-    } else {
-      return("#nota");
-    }
   } else {
   alert("Please enter 3 values!");
 }
